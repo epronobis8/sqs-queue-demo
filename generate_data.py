@@ -1,7 +1,3 @@
-"""
-https://www.geeksforgeeks.org/python-faker-library#:~:text=Faker%20is%20a%20Python%20package%20that%20generates%20fake%20data%20for%20you.&text=Faker%20has%20the%20ability%20to,%2C%20email%2C%20text%2C%20etc.&text=Application%201%20%3A%20Create%20a%20json%20of%20100%20students%20with%20name%20students.
-"""
-
 from faker import Faker
 
 # To create a json file
@@ -21,20 +17,18 @@ def input_data(x):
 		student_data[i]['id']= randint(1, 100)
 		student_data[i]['name']= fake.name()
 		student_data[i]['address']= fake.address()
-		student_data[i]['latitude']= str(fake.latitude())
-		student_data[i]['longitude']= str(fake.longitude())
+		student_data[i]['credit card']= fake.credit_card_number()
 	print(student_data)
 
 	# dictionary dumped as json in a json file
-	with open('students.json', 'w') as fp:
+	with open('customerInfo.json', 'w') as fp:
 		json.dump(student_data, fp)
 	
 
 def main():
 
 	# Enter number of students
-	# For the above task make this 100
-	number_of_students = 10
+	number_of_students = 30
 	input_data(number_of_students)
 main()
 # The folder or location where this python code

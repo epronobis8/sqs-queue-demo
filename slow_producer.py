@@ -6,7 +6,7 @@ from sqs_url import QUEUE_URL
 # Create SQS client
 sqs = boto3.client('sqs')
 
-with open('slow_data.json', 'r') as f:
+with open('customerInfo.json', 'r') as f:
     data = json.loads(f.read())
 
 for i in data:
@@ -18,7 +18,7 @@ for i in data:
         MessageAttributes={
             'JobType': {
                 'DataType': 'String',
-                'StringValue': 'NewDonor'
+                'StringValue': 'NewCustomer'
             },
             'Producer': {
                 'DataType': 'String',

@@ -5,3 +5,6 @@ need to loan JSON data into this. e.g.,
     "email": "bensonpruitt@thepenguinconsultingfirm.com",
     "donation": 145.26
   },
+
+Install Faker
+pip install Faker
