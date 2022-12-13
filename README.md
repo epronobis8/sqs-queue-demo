@@ -16,9 +16,9 @@ Install python on EC2 instance
 * pip install boto3
 
 # Create SQS Queue
-unzip ec2_files.zip
-cd ec2_files
-python3 create_queue.py
+* unzip ec2_files.zip
+* cd ec2_files
+* python3 create_queue.py
 
 # Get SQS endpoint and update SQS_url.py file
 * aws sqs get-queue-url --queue-name mynewq
