@@ -1,3 +1,6 @@
 SQS-queue-data-example.png 
 .terraform/
 .terraform.lock.hcl
+.DS_store
+terraform.tfstate
+terraform.tfstate.backup
