@@ -1,1 +1,3 @@
 SQS-queue-data-example.png 
+.terraform/
+.terraform.lock.hcl
