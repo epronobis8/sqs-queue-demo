@@ -8,15 +8,7 @@ Before running generate_data.py, please be sure to install the Fake library.
 
 
 ## Copy files
-Copy the following files to the EC2 instance
-* fast_producer.py
-* customerInfo.json
-* queue_status.py
-* slow_producer.py
-* purge_queue.py
-* sqs_url.py
-
-Copy EC2_files.zip to EC2 instance
+Copy the following the ec2_files folder to the EC2 instance
 * scp -i ~/Downloads/pem-file.pem ~/Documents/sqs-queue-demo/ec2_files.zip ec2-user@XX.XX.XX.XX:/home/ec2-user
 
 Install python on EC2 instance
@@ -32,7 +24,7 @@ python3 create_queue.py
 # Get SQS endpoint and update SQS_url.py file
 * aws sqs get-queue-url --queue-name mynewq
 * vi SQS_URL.py
-* update link
+* Update with SQS link
 
 # Demo
 * run python3 slow_producer.py
