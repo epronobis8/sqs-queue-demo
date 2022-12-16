@@ -1,5 +1,5 @@
 provider "aws" {
-  region  = "us-east-1"
+  region = "us-east-1"
 }
 
 resource "aws_vpc" "some_custom_vpc" {
@@ -69,7 +69,7 @@ resource "aws_security_group" "web_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = var.ip-address
+    cidr_blocks = [var.ip-address]
   }
 
   egress {

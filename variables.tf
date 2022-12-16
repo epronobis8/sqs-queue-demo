@@ -5,6 +5,7 @@ variable "key-pair" {
 
 variable "ip-address" {
   description = "Insert IP address /32 for EC2 Security Group"
+  type        = string
 }
 
 
